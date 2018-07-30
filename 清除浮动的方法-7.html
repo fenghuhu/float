@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.father{
+				border:1px solid red;
+				background-color: yellow;
+				/*解决方案*/
+				display: table;
+			}
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+	  <div class = "father">
+	  <div class = "div1">left</div>
+	  <div class = "div2">right</div>
+	  </div>
+	</body>
+</html>
+父级div定义 display:table 
+原理：将div属性变成表格 
+优点：没有优点 
+缺点：会产生新的未知问题。 

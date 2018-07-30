@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.father{
+				border:1px solid red;
+				background-color: yellow;
+				float: left;
+			}
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				float: right;
+			}
+			.div3{
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+	  <div class = "father">
+	  <div class = "div1">left</div>
+	  <div class = "div2">right</div>
+	  </div>
+	  <div class="div3">div3<div></div>
+	</body>
+</html>
+原理：所有代码一起浮动，就变成了一个整体 
+优点：没有优点 
+缺点：会产生新的浮动问题。 

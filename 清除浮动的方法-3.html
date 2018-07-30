@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.father{
+				border:1px solid red;
+				background-color: yellow;
+			}
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				float: right;
+			}
+			/*解决方案*/
+			.clearfix:after{
+				display: block;
+				clear: both;
+				content: "";
+				visibility:hidden;
+				height:0;
+			}
+			.clearfix{
+				zoom: 1;
+			}
+		</style>
+	</head>
+	<body>
+	  <div class = "father clearfix">
+	  <div class = "div1">left</div>
+	  <div class = "div2">right</div>
+	  </div>
+	</body>
+</html>
+原理：父级div定义伪类：after和zoom:1;
+IE8以上和非IE浏览器才支持：after,zoom（ie专有属性）可以解决ie6,ie7浮动问题；
+优点：浏览器支持好，不容易出现怪问题（现在大部分都在用这个）
+缺点：代码多，不少初学者不理解原理，要两句代码结合使用才能让主流浏览器支持；

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.father{
+				border:1px solid red;
+				background-color: yellow;
+				/*解决方案*/
+				height: 200px;	
+			}
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+	  <div class = "father">
+	  <div class = "div1">left</div>
+	  <div class = "div2">right</div>
+	  </div>
+	</body>
+</html>
+                       出现的问题：父元素失去高度；
+	  	解决方案：给父元素设置高度；只有在布局定高的情况下使用；
+	  	优点：代码简单--缺点：需要给出精确的高度；

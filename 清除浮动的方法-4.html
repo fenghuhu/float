@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.father{
+				border:1px solid red;
+				background-color: yellow;
+				overflow: hidden;
+				/*解决方案*/
+				/*zoom:1;*/
+			}
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+	  <div class = "father">
+	  <div class = "div1">left</div>
+	  <div class = "div2">right</div>
+	  </div>
+	</body>
+</html>
+原理：必须定义width或者zoom:1;,同时不能定义height，使用overflow：hidden时，浏览器会自动检查浮动区域的高度；
+优点：简单，代码少，浏览器支持好；
+缺点：不能和position配合使用，因为超出的尺寸的会被隐藏。
+

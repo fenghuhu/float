@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.father{
+				border:1px solid red;
+				background-color: yellow;	
+			}
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				float: right;
+			}
+			/*解决方案*/
+			.clearfix{
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+	  <div class = "father">
+	  <div class = "div1">left</div>
+	  <div class = "div2">right</div>
+	  <div class="clearfix"></div>
+	  </div>
+	</body>
+</html>
+原理：给元素后面添加一个空的div然乎利用css  .clearfix{clear:both}
+优点：代码简单，浏览器支持好，不容易出现怪异问题；
+缺点：不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，让人感觉很不好
+

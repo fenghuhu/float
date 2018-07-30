@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.father{
+				border:1px solid red;
+				background-color: yellow;
+				zoom: 1;
+			}
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				float: left;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				float: right;
+			}
+			.clearfix{
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+	  <div class = "father">
+	  <div class = "div1">left</div>
+	  <div class = "div2">right</div>
+	  <br class="clearfix" />
+	  </div>
+	</body>
+</html>
+结尾处加 br标签 clear:both 
+原理：父级div定义zoom:1来解决IE浮动问题，结尾处加 br标签 clear:both 
+建议：不推荐使用，只作了解。 
